@@ -1,0 +1,787 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*------------------ NAVBAR STYLING BEGINS HERE-----------------------*/
+nav{
+    /* border: 1px solid blue; */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #26A349;
+}
+.logo{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    min-height: 8vh;
+    font-size: 1.3rem;
+    /* min-width: vw; */
+    /* background-color: green; */
+}
+.logo h4{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+.nav-links{
+    /* border: 1px solid black; */
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    /* display: none; */
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    /* transform: translateX(100%); */
+    background-color: #171A1B;
+    justify-content: space-evenly;
+    z-index: 9999999999999;
+    pointer-events: none;
+    /* transition: all .5s ease-in-out; */
+    
+}
+.nav-active{
+    /* transform: translateX(0.2%); */
+    position: absolute;
+    top: 8vh;
+    height: 92vh;
+    pointer-events: all;
+    opacity: 1;
+}
+.nav-links button{
+    font-size: 1.3rem;
+    color: white;
+    /* text-decoration: none; */
+    border: 2px solid #39FF70;
+    border-radius: 5px;
+    /* padding-right: 100px; */
+    /* padding-left: 100px; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90vw;
+    background: none;
+}
+.nav-links a{
+    /* font-size: 1.3rem; */
+    /* color: white; */
+    text-decoration: none;
+    /* border: 2px solid #39FF70; */
+    /* border-radius: 5px; */
+    /* padding-right: 100px; */
+    /* padding-left: 100px; */
+    width: fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+    background: none;
+}
+.nav-links button:hover{
+    /* letter-spacing: 1.5px; */
+    /* font-size: 1.3rem; */
+    background-color: #39FF70;
+    transition:all .3s ease-in-out;
+    cursor: pointer;
+}
+.nav-links li{
+    list-style: none;
+}
+.burger{
+    /* border: 1px solid red; */
+    /* background-color: green; */
+    display: block;
+    cursor: pointer;
+	pointer-events: all;
+}
+.burger div{
+    background-color: white;
+    width: 25px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-8px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-8px,-6px);
+}
+
+
+/*        --------NAVBAR SECTION ENDS HERE-----------------         */
+
+
+/*------            [PAGE SECTION]          -------*/
+
+
+/*---------------- PAGE SECTION BEGINS HERE ---------------------*/
+
+/*      CONTAINERS       */
+.container1{
+    width: 100vw;
+    height: 92vh;
+    position: absolute;
+    top: 8vh;
+    color: white;
+    /* background-color: green; */
+    z-index: 999;
+    background-image: linear-gradient(rgba(0,0,0,0.527), rgba(0,0,0,0.5)), url('imgs/home_wall.jpg');
+    background-size: cover;
+    background-position: center;
+    /* scroll-snap-type: x mandatory; */
+    /* overflow-x: scroll; */
+    /* display: flex; */
+}
+.container2{
+    position: absolute;
+    top: 8vh;
+    width: 100%;
+    height: 155%;
+    background-image: linear-gradient(rgba(0,0,0,0.527), rgba(0,0,0,0.5)), url('imgs/rollercost\(1\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+    /* background-color: green; */
+    z-index: 999;
+    overflow: scroll;
+    /* scroll-snap-type: x mandatory;*/
+    /* overflow-x: scroll; */
+    /* display: flex;  */
+}
+
+/*       SECTIONS       */
+.home{
+    /* flex: none; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    height: 100%;
+    /* scroll-margin-top: 8vh; */
+    /* background-color: rgb(28,28,28); */
+}
+.experience{
+    /* flex: none; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    height: 170%;
+    /* overflow: scroll; */
+    /* scroll-snap-align: start; */
+    /* scroll-margin-top: 8vh; */
+}
+/*second method for creating a dark image background*/
+/* img{
+    width: 100%;
+    height: inherit;
+    filter: brightness(50%);
+} */
+
+
+
+/*      -------------HOME PAGE STYLING BEGINS HERE--------------       */
+.welcome{
+    /* border: 1px solid red; */
+    width: 100vw;
+    position: relative;
+    /* left: 120px; */
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper1{
+    /* border: 1px solid blueviolet; */
+    width: 70vw;
+}
+.welcome_to{
+    /* border: 2px solid blue; */
+    margin-bottom: 90px;
+    width: inherit;
+    overflow: hidden;
+}
+/* .welcome_to:hover:before{
+    width: 10%;
+} */
+.welcome_to h1{
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: Headin 1s ease forwards;
+    animation-delay: 1s;
+}
+.fun_zone{
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    /* border: 2px solid blue; */
+    width: inherit;
+}
+.fun_zone h2{
+    letter-spacing: 6px;
+    font-size: 2.5rem;
+    animation: Headout 1s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.true_fun{
+    /* border: 1px solid yellowgreen; */
+    width: fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+    font-style: italic;
+    position: absolute;
+    right: 20px;
+    top: 60vh;
+    overflow: hidden;
+}
+.true_fun h1{
+    animation: Slidein 1s ease backwards;
+    animation-delay: 3s;
+    /* opacity: 0; */
+}
+
+
+
+.home_links{
+    /* border: 3px solid blue; */
+    width: fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+    position: absolute;
+    right: 70px;
+    top: 80vh;
+}
+.home_links a{
+    display: inline-block;
+    background-color: #39FF70;
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 15px;
+    transition: transform .4s ease-in-out;
+}
+.home_links a:hover{
+    transform: translateY(-4px);
+}
+.view{
+    margin-left: 10px;
+}
+@keyframes Headin{
+    0%{
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes Headout{
+    0%{
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes Slidein{
+    0%{
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+/*      -------------HOME PAGE STYLING ENDS HERE--------------       */
+
+
+
+
+
+/*      EXPERIENCE PAGE STYLING BEGINS HERE     */
+
+.experience{
+    /* background-color: rgb(28,28,28); */
+   
+    /* width: 100%;        width and height of this section remain commented nevertheless */
+    /* height: 100%; */
+    color: white;
+}
+.experience .xp{
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    border-bottom: 4px solid #39FF70;
+    margin: 10px 50px;
+    font-size: 1.7rem;
+}
+.experience .ride{
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    border-bottom: 4px solid #39FF70;
+    margin: 0 50px;
+    font-size: 1.7rem;
+}
+.wrapper2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* align-items: center; */
+}
+.container-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3em;
+    grid-column-gap: 10em;
+}
+.container-1 > div{
+    box-sizing: border-box;
+    padding: 0;
+    /* width: 300px; */
+    height: 200px;
+    border: 2.5px solid #39FF70;
+    border-radius: 5px;
+}
+.carousel{
+    
+    background-image: url('imgs/ferris\(morn\).jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+.seesaw{
+    
+    background-image: url('imgs/cross.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+.water-slide{
+    
+    background-image: url('imgs/boat.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+.ferris{
+    
+    background-image: url('imgs/merrygo\ \(2\).jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+.container-1 > div p{
+    text-align: center;
+}
+.container-1 > div h3{
+    padding: .2em;
+    transform: translateX(20px);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    width: 300px;
+    height: 200px;
+}
+.container-1 > div:hover{
+    transform: translateY(-10px);
+}
+.carousel:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/ferris\(morn\).jpg');
+    background-size: cover;
+    background-position: center;
+}
+.seesaw:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/cross.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+.water-slide:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/boat.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+.ferris:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/merrygo\ \(2\).jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+.container-1 > div h3:hover{
+    opacity: 1;
+    transform: translateX(0);
+}
+.map{
+    /* border: 2.5px solid #39FF70; */
+    background: url('imgs/map\(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+/* @keyframes navfade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+} */
+/*      ---------------------EXPERIENCE PAGE STYLING ENDS HERE----------------      */
+
+
+/*      ------------FIX FURTHER STYLING BELOW HERE---------------------     */
+
+
+
+
+
+
+
+
+/*      ----------------------ALL MOBILE SYLING ENDS HERE!!!!!!!!!!!!!!!!!!!!......-------------------      */
+
+
+
+
+
+                            /*  --------------------MEDIA QUERIES---------------        */
+
+
+/*---------------------------------  MEDIA QUERIES FOR THE NAVBAR        -----------------------------*/
+
+
+
+
+@media screen and (min-width: 550px) {
+    .nav-links button{
+        width: 70vw;
+    }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+    body{
+        overflow-x: hidden;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    nav{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99999999999;
+        min-height: 8vh;
+        border-bottom: 5px solid #39FF70;
+        /* box-shadow: inset 0 -6px 0 green; */
+        
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        background-color: #26A349;
+        border-radius: 1.5px;
+        width: 15vw;
+    }
+    .burger{
+        display: none;
+    }
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        /* transition: transform .5s ease-in-out; */
+        /* transform: translateX(0%); */
+        width: 83vw;
+        /* position: relative; */
+        height: 8vh;
+        opacity: 1;
+        background: none;
+        top: 0vh;
+        pointer-events: all;
+    }
+    .nav-links button{
+        color: white;
+        font-size: 1rem;
+        border: none;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: none; */
+        align-items: center;
+        width: fit-content;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+        cursor: pointer;
+    }
+    .nav-links button:hover{
+        /* font-size: 1rem;
+        border: none;
+        padding: 0;
+        width: 50px; */
+        /* box-shadow: inset 0 -2px 0 #39FF70; */
+        font-size: 1rem;
+        background-color: #39FF70;
+        
+    }
+    .nav-links a{
+        width: fit-content;
+        /* font-size: 0.9rem; */
+        /* border: 1px solid blue; */
+        padding: 0;
+        /* wrap: none; */
+    }
+    /* .nav-links button a:hover{
+        letter-spacing: none;
+        box-shadow: inset 0 -2px 0 #39FF70;
+        font-size: ;
+        color: aqua;
+        transition: all .3s ease-in-out;
+        
+    } */
+
+                /*      ------------------MEDIA QUERIES FOR NAVBAR ENDS HERE-----------------      */
+
+
+
+    /*--------------------- MEDIA QUERIES FOR PAGE SECTION BEGINS HERE----------------------*/
+    .container1{
+        width: 100vw;
+        height: 92vh;
+        /* background-color: green; */
+        z-index: 999;
+        /* scroll-snap-type: x mandatory;   (1)*/
+        /* overflow-x: scroll;      (2)*/
+        /* display: flex;       (3)*/
+    }
+    .container2{
+        position: absolute;
+        top: 8vh;
+        width: 100%;
+        height: 92vh;
+		/* margin: 0; */
+		/* padding: 0; */
+        /* background-color: green; */
+        z-index: 999;
+        /* scroll-snap-type: x mandatory; */
+        overflow-x: hidden;
+		overflow-y: scroll;
+        /* display: flex; */
+    }
+    .home{
+        /* flex: none;      (4)*/
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        width: 100%;
+        height: 100%;
+        /* scroll-snap-align: start;        (5)*/
+        /* scroll-margin-top: 8vh;      (6)*/
+        /* background-color: rgb(28,28,28); */
+    }
+    .experience{
+        /* flex: none; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        width: 100%;
+        height: 145%;
+        /* scroll-snap-align: start; */
+        /* scroll-margin-top: 8vh; */
+    }
+
+
+    /*  -------MEDIA QUERIES FOR HOME PAGE BEGINS HERE----------    */
+
+
+    .welcome{
+        position: relative;
+        /* left: 120px; */
+        /* top: 100px; */
+    }
+    .wrapper1{
+        width: 70vw;
+    }
+    .welcome_to{
+        /* border: 1px solid blue; */
+    }
+    .welcome_to h1{
+        font-size: 3rem;
+    }
+    .fun_zone h2{
+        letter-spacing: 20px;
+        font-size: 4rem;
+    }
+    .true_fun{
+        right: 300px;
+    }
+    
+
+    .home_links{
+        right: 300px;
+        top: 75vh;
+    }
+    
+   
+    /*  -------MEDIA QUERIES FOR HOME PAGE ENDS HERE----------    */
+
+
+
+    /*      ----------------MEDIA QUERIES FOR EXPERIENCE BEGINS HERE---------------     */
+
+
+    
+    .experience{
+        /* background-color: rgb(28,28,28); */
+        /* border: 1px solid blue; */
+        /* background: url('imgs/rollercost\(1\).jpg'); */
+        /* background-size: 100% 100%; */
+        /* background-repeat: no-repeat; */
+        color: white;
+    }
+    .experience h1{
+        width: fit-content;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        border-bottom: 4px solid #39FF70;
+        margin: 10px 50px;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        /* align-items: center; */
+    }
+    .container-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3em;
+        grid-column-gap: 10em;
+    }
+    .container-1 > div{
+        /* box-sizing: border-box; */
+        /* padding: .4em; */
+        width: 300px;
+        height: 200px;
+        border: 2.5px solid #39FF70;
+        border-radius: 5px;
+    }
+    .carousel{
+        /* width: 300px; */
+        background-image: url('imgs/ferris\(morn\).jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease-in-out;
+    }
+    .seesaw{
+        /* width: 300px; */
+        background-image: url('imgs/cross.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease-in-out;
+    }
+    .water-slide{
+        /* width: 300px; */
+        background-image: url('imgs/boat.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease-in-out;
+    }
+    .ferris{
+        /* width: 300px; */
+        background-image: url('imgs/merrygo\ \(2\).jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease-in-out;
+    }
+    .container-1 > div p{
+        text-align: center;
+    }
+    .container-1 > div h3{
+        padding: .1em;
+        transform: translateX(20px);
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+    .container-1 > div:hover{
+        transform: translateY(-10px);
+    }
+    .carousel:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/ferris\(morn\).jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .seesaw:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/cross.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease-in-out;
+    }
+    .water-slide:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/boat.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease-in-out;
+    }
+    .ferris:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.527) ,rgba(0,0,0,0.5)), url('imgs/merrygo\ \(2\).jpg');
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease-in-out;
+    }
+    .container-1 > div h3:hover{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /*      ----------------MEDIA QUERIES FOR EXPERIENCE PAGE ENDS HERE---------------     */
+
+
+    /*      ---------------------FURTHER MEDIA QUERIES STARTS BELOW HERE--------------------------      */
+
+
+    /*      ---------------------ALL MEDIA QUERIES ENDS HERE!!!!!!!!!!!!!!!!!.....------------  */
+
+}
+
+
+
+                                                    /*  !!!!!!!END OF FUN_ZONE STYLESHEET!!!!!!!!  */
